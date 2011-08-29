@@ -23,7 +23,8 @@
     [localManager setDistanceFilter:kCLDistanceFilterNone];
     [localManager setDesiredAccuracy:kCLLocationAccuracyBest];
     
-    [localManager startUpdatingLocation];
+  //  [localManager startUpdatingLocation];
+    [worldView setShowsUserLocation:YES];
     
     
     [self.window makeKeyAndVisible];
@@ -41,6 +42,13 @@
     didFailWithError:(NSError *)error
 {
     NSLog(@"Could not find location: %@", error);
+}
+
+- (void)mapView:(MKMapView *)mv didUpdateUserLocation:(MKUserLocation *)u
+{
+    CLLocationCoordinate2D loc = [u coordinate];
+    MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(loc, 250, 250);
+    [worldView setRegion:region animated:YES];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application

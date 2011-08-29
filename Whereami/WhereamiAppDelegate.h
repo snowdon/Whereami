@@ -8,9 +8,15 @@
 
 #import <UIKit/UIKit.h>
 #import <CoreLocation/CoreLocation.h>
+#import <MapKit/MapKit.h>
 
-@interface WhereamiAppDelegate : NSObject <UIApplicationDelegate> {
+@interface WhereamiAppDelegate : NSObject
+    <UIApplicationDelegate, CLLocationManagerDelegate, MKMapViewDelegate> {
     CLLocationManager *localManager;
+
+    IBOutlet MKMapView *worldView;
+    IBOutlet UIActivityIndicatorView *activityIndicator;
+    IBOutlet UITextField *loationTitleField;
 
 }
 
