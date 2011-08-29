@@ -15,9 +15,32 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+    
+    localManager = [[CLLocationManager alloc] init];
+    
+    [localManager setDelegate:self];
+    
+    [localManager setDistanceFilter:kCLDistanceFilterNone];
+    [localManager setDesiredAccuracy:kCLLocationAccuracyBest];
+    
+    [localManager startUpdatingLocation];
+    
+    
     [self.window makeKeyAndVisible];
     return YES;
+}
+
+- (void)locationManager:(CLLocationManager *)manager
+    didUpdateToLocation:(CLLocation *)newLocation
+           fromLocation:(CLLocation *)oldLocation
+{
+    NSLog(@"%@", newLocation);
+}
+
+- (void)locationManager:(CLLocationManager *)manager
+    didFailWithError:(NSError *)error
+{
+    NSLog(@"Could not find location: %@", error);
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application

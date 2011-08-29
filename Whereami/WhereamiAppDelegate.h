@@ -7,8 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreLocation/CoreLocation.h>
 
 @interface WhereamiAppDelegate : NSObject <UIApplicationDelegate> {
+    CLLocationManager *localManager;
 
 }
 

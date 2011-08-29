@@ -14,6 +14,8 @@
 		15D58921140B69600027D4A0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 15D58920140B69600027D4A0 /* main.m */; };
 		15D58924140B69600027D4A0 /* WhereamiAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 15D58923140B69600027D4A0 /* WhereamiAppDelegate.m */; };
 		15D58927140B69600027D4A0 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15D58925140B69600027D4A0 /* MainWindow.xib */; };
+		15D5892E140B69AC0027D4A0 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15D5892D140B69AC0027D4A0 /* CoreLocation.framework */; };
+		15D58930140B69B30027D4A0 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15D5892F140B69B30027D4A0 /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		15D58922140B69600027D4A0 /* WhereamiAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WhereamiAppDelegate.h; sourceTree = "<group>"; };
 		15D58923140B69600027D4A0 /* WhereamiAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WhereamiAppDelegate.m; sourceTree = "<group>"; };
 		15D58926140B69600027D4A0 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		15D5892D140B69AC0027D4A0 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		15D5892F140B69B30027D4A0 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +39,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				15D58930140B69B30027D4A0 /* MapKit.framework in Frameworks */,
+				15D5892E140B69AC0027D4A0 /* CoreLocation.framework in Frameworks */,
 				15D58914140B69600027D4A0 /* UIKit.framework in Frameworks */,
 				15D58916140B69600027D4A0 /* Foundation.framework in Frameworks */,
 				15D58918140B69600027D4A0 /* CoreGraphics.framework in Frameworks */,
@@ -64,6 +70,8 @@
 		15D58912140B69600027D4A0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				15D5892F140B69B30027D4A0 /* MapKit.framework */,
+				15D5892D140B69AC0027D4A0 /* CoreLocation.framework */,
 				15D58913140B69600027D4A0 /* UIKit.framework */,
 				15D58915140B69600027D4A0 /* Foundation.framework */,
 				15D58917140B69600027D4A0 /* CoreGraphics.framework */,
